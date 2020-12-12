@@ -6,7 +6,6 @@ const cardbody = document.querySelectorAll(".card-body")[1];
 const clear = document.getElementById("clear-films");
 
 
-// Tüm eventleri yükleme
 
 eventListeners();
 
@@ -28,16 +27,16 @@ function addFilm(e){
     const url = urlElement.value;
 
     if (title === "" || director === "" || url === ""){
-        // Hata 
+        
         UI.displayMessages("Fill in all fields","danger");
 
     }
     else {
-        // Yeni Film
+       
         const newFilm = new Film(title,director,url);
 
-        UI.addFilmToUI(newFilm); // Arayüze film ekleme
-        Storage.addFilmToStorage(newFilm); // Storage'a Film Ekleme
+        UI.addFilmToUI(newFilm); 
+        Storage.addFilmToStorage(newFilm); 
 
         UI.displayMessages("The movie was successfully added","success");
 

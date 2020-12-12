@@ -72,9 +72,8 @@ class UI {
      
          const filmList = document.getElementById("films");
      
-         // filmList.innerHTML = "";
      
-         while(filmList.firstElementChild !== null) { // Child Olduğu Sürece
+         while(filmList.firstElementChild !== null) { 
              filmList.firstElementChild.remove();
          }
      }
